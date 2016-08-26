@@ -1,0 +1,41 @@
+<idea-plugin version="2">
+  <id>com.juanfelippo.translator</id>
+  <name>Translator</name>
+  <version>1.0</version>
+  <vendor email="jafelippo@gmail.com" url="https://twitter.com/JuanFelippo">Juan Felippo</vendor>
+
+  <description><![CDATA[
+
+      Easy Translate to any language!!!! For FREEE!!!!.<br>
+
+      Default language is English ("en"). Go Settings->Other Settings ->Translator
+
+
+    ]]></description>
+
+  <change-notes><![CDATA[
+
+    ]]>
+  </change-notes>
+
+  <idea-version since-build="141.0"/>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <applicationConfigurable instance="Settings"/>
+  </extensions>
+
+  <actions>
+    <action id="TranslationAction" class="TranslationAction"
+            text="TranslationDialog"
+            description="tranlator">
+      <add-to-group group-id="MainToolBar" anchor="after" relative-to-action="HelpTopics"/>
+    </action>
+    <action id="EditorPopupMenuAction" class="EditorPopupMenuAction"
+            text="Translate"
+            description="translate">
+      <add-to-group group-id="EditorPopupMenu" anchor="before" relative-to-action="$Cut"/>
+    </action>
+  </actions>
+
+
+</idea-plugin>
